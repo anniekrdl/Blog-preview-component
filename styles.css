@@ -1,0 +1,111 @@
+@font-face {
+    font-family: Body-bold;
+    /* Geef een naam aan het lettertype */
+    src: url('assets/fonts/static/Figtree-ExtraBold.ttf');
+    /* Vervang 'path/to/your/assets/font.ttf' door het pad naar je lettertypebestand */
+}
+
+@font-face {
+    font-family: Body-regular;
+    /* Geef een naam aan het lettertype */
+    src: url('assets/fonts/static/Figtree-SemiBold.ttf');
+    /* Vervang 'path/to/your/assets/font.ttf' door het pad naar je lettertypebestand */
+}
+
+
+:root {
+    --yellow: hsl(47, 88%, 63%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 50%);
+    --black: hsl(0, 0%, 7%);
+}
+
+body {
+    background-color: var(--yellow);
+    font-family: Body-regular, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    box-sizing: border-box;
+    width: 384px;
+    background-color: var(--white);
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 8px 8px;
+}
+
+.img {
+    background-image: url("assets/images/illustration-article.svg");
+    height: 200px;
+    border-radius: 10px;
+}
+
+.content {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.learning {
+    font-family: Body-bold, sans-serif;
+    font-size: 14px;
+    background-color: var(--yellow);
+    padding: 4px 12px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    display: inline-block;
+}
+
+.title {
+    font-family: Body-bold, sans-serif;
+    font-size: 24px;
+    margin-bottom: 12px;
+
+}
+
+.title:hover {
+    cursor: pointer;
+    color: var(--yellow);
+}
+
+.published {
+    font-size: 14px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.paragraph {
+    font-size: 16px;
+    color: var(--grey);
+}
+
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img-user {
+    background-image: url("assets/images/image-avatar.webp");
+    height: 32px;
+    width: 32px;
+    background-position: center;
+    background-size: contain;
+    margin-right: 12px;
+}
+
+.name-user {
+    text-align: center;
+}
+
+@media (max-width: 375px) {
+    .card-container {
+        width: 327px;
+
+    }
+
+}
